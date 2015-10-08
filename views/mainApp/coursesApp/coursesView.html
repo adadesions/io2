@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="courses-header jumbotron">
+    <h1>
+      <!-- <i class="fa fa-lightbulb-o fa-lg my-font-yellow"></i> -->
+      <i class="fa fa-cog fa-spin my-font-yellow"></i>
+      All AdaCode's Courses
+      <i class="fa fa-cog fa-spin my-font-yellow"></i>
+    </h1>
+    <p>ทุกคอร์ส ทุกความมันส์ และทุกการเรียนรู้เริ่มต้นได้ที่นี่เลย!!</p>
+      <a href="/register">
+        <button class="btn btn-success">
+            <i class="fa fa-hand-o-right fa-lg"></i> &nbsp;&nbsp;สมัครเรียน
+        </button>
+      </a>
+
+  </div>
+</div>
+
+<div class="row courses-body" ng-show="{{isAll()}}">
+  <div class="col-lg-4 course-item" ng-repeat="course in courses">
+    <a href="/courses/{{course.code}}">
+      <img src="/images/forCourses/{{course.image}}" alt="">
+    </a>    
+    <h2>{{course.title}}</h2>
+    <p>ค่าอบรม : {{course.price | currency:"":0}} บาท</p>
+    <small>{{course.content | limitTo: 140}}{{course.content.length > 140 ? '......' : ''}}</small>
+    <a href="/courses/{{course.code}}">
+      <button class="btn btn-xs btn-danger">read more</button>
+    </a>
+    <br>
+  </div>
+</div>
+
+<div class="row courses-body" ng-show="{{!isAll()}}">
+  <div class="col-lg-12 course-full-item">
+    <img class="img-rounded" src="/images/forCourses/{{course.image}}" alt="">
+    <h2>
+      <strong>
+        <i class="fa fa-rocket fa-lg"></i> {{course.title}}
+      </strong>
+    </h2>
+    <div class="information text-center">
+      <h3><b>Information</b></h3>
+      <h4><i class="fa fa-calendar fa-lg"></i> วันที่ : {{course.date}}</h4>
+      <h4><i class="fa fa-clock-o fa-lg"></i> เวลา : {{course.time}}น.</h4>
+      <h4><i class="fa fa-map-marker fa-lg"></i> สถานที่ : {{course.location}}</h4>
+      <h4><i class="fa fa-money fa-lg"></i> ค่าใช้จ่าย : {{course.price | currency:"":0}} บาท</h4>
+    </div>
+    <br>
+    <h3><b><i class="fa fa-info-circle fa-lg"></i> Technology Involved</b></h3>
+    <p>{{course.technology}}</p>
+
+    <h3><b><i class="fa fa-exclamation-triangle fa-lg"></i> Skill Required</b></h3>
+    <p>{{course.required}}</p>
+
+    <h3><b><i class="fa fa-map-signs fa-lg"></i> Course Description</b></h3>
+    <p>{{course.content}}</p>
+
+    <h3><b><i class="fa fa-book fa-lg"></i> Course Syllabus</b></h3>
+    <p ng-bind-html="course.syllabus"></p>
+
+    <h3><b><i class="fa fa-fire fa-lg"></i> Promotion!</b></h3>
+    <p>ครอบครัว AdaCode(นร.เก่า) ราคาพิเศษ: <b>{{course.promotion | currency:"":0}}</b> บาท</p>
+
+  </div>
+  <div class="text-center">
+    <a href="/register">
+      <button type="button" class="btn btn-success btn-lg">
+        <i class="fa fa-hand-o-right fa-lg"></i> &nbsp;&nbsp;สมัครเรียน
+      </button>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+{
+  "courses" : [
+    {
+      "id": 0,
+      "code": "EOM002",
+      "title": "Experience of MEAN",
+      "price": 2700,
+      "promotion": 2500,
+      "date": "24-25 ตุลาคม 2558",
+      "time": "10.00 - 18.00",
+      "duration": "2 days",
+      "location": "ComSci Cafe",
+      "image": "mean.jpg",
+      "content": "เรียนรู้การเขียนเว็บผ่านเทคโนโลยีสุดฮิปอย่าง MongoDB, ExpressJS, AngularJS, และ Node.js ไม่เคยเขียนเว็บมาก่อนก็สามารถที่จะเรียนรู้ได้ไม่ยากครับ นอกจากนี้ยังต่อยอดไปสู่การพัฒนา application บนมือถือได้อีกด้วย มาเรียน มามันส์ไปด้วยกันกับ MEAN Stack ครับ ขอบอกเลยว่านอกจากคุณจะได้เขียนเว็บไว้สำหรับแบรนด์ของคุณแล้ว คุณยังจะได้เรียนรู้วิธีการเขียน Chat app ไว้สำหรับคุยกับลูกค้าหรือผู้ชมเว็บไซต์ของคุณอีกด้วย งานนี้คุ้มสุดๆ ^^",
+      "required": "HTML, CSS, JAVASCRIPT",
+      "technology": "MongoDB, ExpressJS, AngularJS, Node.js, Socket.io",
+      "syllabus" : "<h4><u>Part 1 Javascript</u></h4><p>1. Fundamental of Javascript(ES6)<br>2. Functional Programming</p><br><h4><u>Part 2 NodeJS</u></h4><p>1. Introduction to NodeJS<br>2. Core modules' NodeJS<br>3. Use NodeJS as the way it is<br>4. NPM is heart!</p><br><h4><u>Part 3 ExpressJS</u></h4><p>1. Introduction to ExpressJS<br>2. How to make our life easier with ExpressJS<br>3. ExpressJS' API<br>4. RESTFUL API by ExpressJS</p><br><h4><u>Part 4 MongoDB</u></h4><p>1. Introduction to MongoDB<br>2. Document Database step by step<br>3. CRUD with MongoDB<br>4. NodeJS and MongoDB are connected by Mongoose<br>5. ExpressJS and MongoDB work along</p><br><h4><u>Part 5 AngularJS</u></h4><p>1. Introduction to AngularJS<br>2. First step create Angular App<br>3. Conceptual of AngularJS<br>4. Realtime Single Page App<br>5.Testing</p><br><h4><u>Part 6 Workshops</u></h4><p>1. Realtime Dash Board<br>2. New Chatapp with Socket.io<br>3. Bonus</p>"
+    },
+
+    {
+      "id": 1,
+      "code": "JS101",
+      "title": "Fundamental of JavaScript",
+      "price": 1500,
+      "promotion": 1200,
+      "date": "14 ตุลาคม 2558",
+      "time": "09.00 - 17.00",
+      "duration": "1 day",
+      "location": "ComSci Cafe",
+      "image": "javascript.jpg",
+      "content": "ยุคสมัยที่การพัฒนาต้องแข่งกับเวลาและเทคโนโลยีก็พัฒนากันเร็วมาก จะดีกว่าไหมครับถ้าเราลดเวลาการเรียนรู้เหลือเพียงหนึ่ง! JavaScript เป็นภาษาโปรแกรมมิ่งที่เรียกได้ว่าสามารทำได้ทุกอย่างครอบจักรวาลกันเลยทีเดียว ถ้าคุณกำลังเริ่มต้น ผมแนะนำเป็นอย่างยิ่ง JavaScript ครับคือ คำตอบของคุณครับ",
+      "required": "No skill required",
+      "technology": "JavaScript v6, jQuery",
+      "syllabus" : "<h4><ul><li>Introduction to JavaScript</li><li>What's new in JS6</li><li>Application of JS (Workshop)</li><li>Introduction to jQuery</li><li>jQuery in real life</li><li>Recommended JS library</li></ul></h4>"
+    },
+
+    {
+      "id": 2,
+      "code": "BS101",
+      "title": "Bootstrap 3 times!",
+      "price": 1500,
+      "promotion": 1200,
+      "date": "NA",
+      "time": "09.00 - 17.00",
+      "duration": "1 day",
+      "location": "ComSci Cafe",
+      "image": "bootstrap.png",
+      "content": "ผมเชื่อว่าหลายๆท่านมีปัญหากับสร้างเว็บไซต์ให้ใช้ได้กับทุกๆขนาดหน้าจอและมันเป็นปัญหาที่หนักหน่วงจริงๆเลยใช่ไหมครับ ปัญหาของทุกท่านจะหมดไปเมื่อคุณได้รู้จับกับ CSS Framework สุดฮิตอย่าง Bootstrap จาก twitter ที่จะทำให้ปัญหาข้างต้นของคุณหมดไปครับ มาเรียน Bootstrap กับเราครับและเว็บของคุณจะไม่น่าเบื่ออีกต่อไป",
+    "required": "No skill required",
+    "technology": "JavaScript, CSS",
+    "syllabus" : "<h4><ul><li>Introduction to Bootstrap 3</li><li>Installation for beginner</li><li>Move from Vanilla CSS to Mr.Bootstrap</li><li>How to use component and javascript library</li><li>Blow your mind Workshop</li></ul></h4>"
+    },
+
+    {
+      "id": 3,
+      "code": "PV909",
+      "title": "The Exclusive Flight",
+      "price": 2500,
+      "promotion": 2000,
+      "date": "Depending on you",
+      "time": "10.00 - 18.00",
+      "duration": "1 day",
+      "location": "On demand",
+      "image": "exclusive.jpg",
+      "content": "พิเศษสุดกับคอร์สส่วนตั๊วววว...ส่วนตัวกับโค้ช Ada อยากจะปรึกษา อยากจะรู้ตั้งแต่พื้นฐาน อยากจะทำอะไรบอกมาเลย ผมจะจัดให้อย่างสาสมไม่ว่าจะ HTML, CSS, JavaScript, PHP, Data Structure, Algorithms, หรือ อะไรอื่นๆที่คุณคิดออกแต่ผมคาดไม่ถึงลองมาคุยกันครับถ้า click! ก็ไปเรียนกันเลย",
+    "required": "No skill required",
+    "technology": "HTML, CSS, JavaScript, PHP, Data Structure, Algorithms, C",
+    "syllabus" : ""
+    }
+  ]
+}

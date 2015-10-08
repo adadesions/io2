@@ -1,0 +1,115 @@
+doctype html
+html
+  head
+    title 
+    meta(charset="utf-8")
+    meta(name="description",content="")
+    meta(name="keywords",content="ada,code,AdaCode.io")
+    meta(name="author",content="Adacode.io")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    base(href="/")
+    link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+    //- link(rel="icon" href="/favicon.ico")
+    link(rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/font-awesome/css/font-awesome.min.css")
+    link(href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,400italic,700' rel='stylesheet' type='text/css')
+    link(rel="stylesheet" href="/stylesheets/master.css")
+    
+    script(type="text/javascript" src="/angular/angular.min.js")
+    script(type="text/javascript" src="/angular-route/angular-route.min.js")
+    script(type="text/javascript" src="/angular-ui-router/build/angular-ui-router.min.js")
+    script(type="text/javascript" src="/angular-sanitize/angular-sanitize.min.js")
+    script(type="text/javascript" src="/jquery/dist/jquery.min.js")
+    script(type="text/javascript" src="/bootstrap/dist/js/bootstrap.min.js")
+    script(type="text/javascript" src="/underscore/underscore-min.js")
+    script(type="text/javascript" src="/mainApp/main.js")
+    script(type="text/javascript" src="/mainApp/welcomeApp/welcomeController.js")
+    script(type="text/javascript" src="/mainApp/coursesApp/coursesController.js")
+  body(ng-app="mainApp" ng-controller="mainCtrl")
+    nav.navbar.navbar-inverse.navbar-fixed-top.navbar-ada
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#ada-navbar" aria-expanded="false")
+            span.sr-only Toggle navigator
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="/") 
+            h2.handwriting A
+          
+        #ada-navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li(ng-class="{active: isActive('/')}")
+              a(href="/") 
+                span.glyphicon.glyphicon-home  Home
+            li(ng-class="{active: isActive('/courses/all')}")
+              a(href="/courses/all") 
+                span.glyphicon.glyphicon-education  Courses
+            li(ng-class="{active: isActive('/report')}")
+              a(href="/report") 
+                span.glyphicon.glyphicon-comment  Reports
+            li(ng-class="{active: isActive('/about')}")
+              a(href="/about") 
+                span.glyphicon.glyphicon-blackboard  AboutUs
+          
+          ul.nav.navbar-nav.navbar-right.hidden-xs          
+            a(href="#") 
+              button(type="button").btn.btn-success                  
+                span(aria-hidden="true").glyphicon.glyphicon-globe
+                |  sign in
+    .container-fluid  
+      .content-body
+        .myNgView(ng-view)
+              
+    
+    nav.navbar.navbar-inverse.footer-ada
+      .container
+        .col-lg-3.text-center 
+            br         
+            h2.brand-footer
+              span.handwriting A
+            small AdaCode.io
+            br
+            small Copyright © 2015 AdaCode.io
+        .col-lg-3.hidden-xs
+          ul.footer-menu
+            li
+              a(href="/") 
+                span.glyphicon.glyphicon-home  Home
+            li
+              a(href="/courses/all") 
+                span.glyphicon.glyphicon-education  Course
+            li
+              a(href="/report") 
+                span.glyphicon.glyphicon-comment  Report
+            li
+              a(href="/about") 
+                span.glyphicon.glyphicon-blackboard  AboutUs        
+        .col-lg-3.col-xs-12
+          ul.partners
+            li
+              | My Friends
+            li
+              a(href="http://thaiprogrammer.org/")
+                img(src="/images/partners/thaiprog_logo.jpg", alt="").img-rounded
+              a(href="http://www.comscicafe.com/home/")
+                img(src="/images/partners/comscicafe_logo.png", alt="").img-rounded
+              a(href="http://khadevmag.blogspot.com/")  
+                img(src="/images/partners/khadev_logo.jpg", alt="").img-rounded
+              a(href="http://cloudcourse.io/")
+                img(src="/images/partners/cloudcourse_logo.png", alt="").img-rounded
+              a(href="https://drivesoftcenter.net/")  
+                img(src="/images/partners/drivesoft_logo.png", alt="").img-rounded
+        .col-lg-3.col-xs-12
+          .social-network                      
+            ul              
+              li 
+                a(href="https://www.facebook.com/adacode.io")
+                  i.fa.fa-facebook-square.fa-3x              
+                a(href="https://github.com/adadesions")
+                  i.fa.fa-github-square.fa-3x 
+              li 
+                a(href="https://www.youtube.com/channel/UCHkqe3Xg7bKZYwPrOYSG-xw/videos?view_as=subscriber")
+                  i.fa.fa-youtube-square.fa-3x               
+                a(href="https://instagram.com/adadesions/")
+                  i.fa.fa-instagram.fa-3x 
