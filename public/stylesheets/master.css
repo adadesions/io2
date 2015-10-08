@@ -277,6 +277,14 @@ p{
   }
 
 
+/*REGISTER SECTION*/
+.form-register{
+  padding: 5em;
+  padding-top: 2em;
+  background-color: rgba(0,0,0,0.7);
+  color: #FFF;
+}
+
 
 
 /*xs-size*/
@@ -383,4 +391,8 @@ p{
         width: 100%;
       }
 
+  /*Register*/
+  .form-register{
+    padding: 1em;
+  }
 }

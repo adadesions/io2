@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var apis = require('./routes/api');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'views')));
 
 // app.use('/', routes);
 app.use('/users', users);
+app.use('/api', apis);
 
 app.all('/*', function(req, res, next) {
     // Just send the index.html for other files to support HTML5Mode

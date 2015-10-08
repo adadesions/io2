@@ -18,6 +18,10 @@ ngApp.config(function($routeProvider, $locationProvider){
     templateUrl : '/mainApp/aboutApp/aboutView.html',
     controller : 'aboutCtrl'
   })
+  .when('/register', {
+    templateUrl : '/mainApp/coursesApp/registerView.html',
+    controller : 'coursesCtrl'
+  })
   .otherwise({
     redirectTo: '/'
   });
