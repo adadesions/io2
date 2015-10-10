@@ -1,3 +1,12 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+  font-family:"Lucida Blackletter";
+  src:url("/fonts/lucidaBlackletter/Aro.eot?") format("eot"),url("/fonts/lucidaBlackletter/Aro.woff") format("woff"),url("/fonts/lucidaBlackletter/Aro.ttf")
+  format("truetype"),url("/fonts/lucidaBlackletter/Aro.svg#LucidaBlackletter")
+  format("svg");font-weight:normal;font-style:normal;
+}
+
+
 body {
   /*font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;*/
   font-family: 'Titillium Web', sans-serif;
