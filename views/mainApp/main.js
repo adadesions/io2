@@ -11,15 +11,19 @@ ngApp.config(function($routeProvider, $locationProvider){
     controller : 'coursesCtrl'
   })
   .when('/report', {
-    templateUrl : '/mainApp/reportApp/reportView.html',
+    templateUrl : '/mainApp/comingsoon.html',
     controller : 'reportCtrl'
   })
   .when('/about', {
-    templateUrl : '/mainApp/aboutApp/aboutView.html',
+    templateUrl : '/mainApp/comingsoon.html',
     controller : 'aboutCtrl'
   })
   .when('/register', {
     templateUrl : '/mainApp/coursesApp/registerView.html',
+    controller : 'coursesCtrl'
+  })
+  .when('/thankyou', {
+    templateUrl : '/mainApp/coursesApp/thankyouView.html',
     controller : 'coursesCtrl'
   })
   .otherwise({

@@ -32,7 +32,11 @@ ngCtrl.controller('coursesCtrl', function($scope, $http, $routeParams, $location
       if(!data.success){
         console.log("ERROR");
       }
+      else{        
+        $location.url('/thankyou');
+      }
     });
   };
+
 
 });

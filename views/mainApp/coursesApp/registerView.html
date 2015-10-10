@@ -8,13 +8,13 @@
       <strong>The Class</strong>
       </h1>
     <br>
-    <form>
+    <form name="registerForm" ng-submit="formProc(registerForm.$valid)" novalidate>
       <div class="form-group">
         <label for="courses">
           <i class="fa fa-hand-spock-o fa-lg"></i>
           Choose your awesome course
         </label>
-        <select name="courses" id="courses" class="form-control" ng-model="formData.course">
+        <select name="courses" id="courses" class="form-control" ng-model="formData.course" required>
           <option  ng-repeat="course in courses" value="{{course.title}}">
             <div ng-model="formData.course_code">{{course.code}}-</div>{{course.title}}
           </option>
@@ -26,7 +26,7 @@
           <i class="fa fa-user fa-lg"></i>
           Fullname
         </label>
-        <input type="text" class="form-control" id="name" name="name" ng-model="formData.name" placeholder="Steve Jobs">
+        <input type="text" class="form-control" id="name" name="name" ng-model="formData.name" placeholder="Steve Jobs" required>
       </div>
 
       <div class="form-group">
@@ -34,7 +34,7 @@
           <i class="fa fa-envelope-o fa-lg"></i>
           E-mail
         </label>
-        <input type="email" class="form-control" id="email" name="email" ng-model="formData.email" placeholder="example@adacode.io">
+        <input type="email" class="form-control" id="email" name="email" ng-model="formData.email" placeholder="example@adacode.io" required>
       </div>
 
       <div class="form-group">
@@ -55,6 +55,12 @@
             <i class="fa fa-female fa-lg"></i> Female
           </label>
         </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="gender" id="transgender" value="transgender" ng-model="formData.gender">
+            <i class="fa fa-transgender-alt fa-lg"></i> Transgender
+          </label>
+        </div>
       </div>
 
       <div class="form-group">
@@ -62,7 +68,7 @@
           <i class="fa fa-hourglass-start fa-lg"></i>
           Age
         </label>
-        <input type="number" class="form-control" id="age" name="age" min="1" max="108" ng-model="formData.age">
+        <input type="number" class="form-control" id="age" name="age" min="1" max="108" ng-model="formData.age" required>
       </div>
 
       <div class="form-group">
@@ -70,7 +76,7 @@
           <i class="fa fa-mobile fa-lg"></i>
           Mobile Number
         </label>
-        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="0981010101" ng-model="formData.mobile">
+        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="0981010101" ng-model="formData.mobile" required>
       </div>
 
       <div class="form-group">
@@ -78,17 +84,14 @@
           <i class="fa fa-puzzle-piece fa-lg"></i>
           Redeem Code
         </label>
-        <input type="text" class="form-control" id="redeem" name="redeem" placeholder="คุณจะได้รับหลังจากชำระเงินแล้ว" ng-model="formData.redeem">
+        <input type="text" class="form-control" id="redeem" name="redeem" placeholder="คุณจะได้รับหลังจากชำระเงินแล้ว" ng-model="formData.redeem" required>
       </div>
       <br>
       <div class="col-lg-4"></div>
-      <button type="button" class="btn btn-success btn-lg col-lg-4" ng-click="formProc()">Submit</button>
+      <button type="submit" class="btn btn-success btn-lg col-lg-4" ng-disabled="registerForm.$invalid">Submit</button>
       <div class="col-lg-4"></div>
     </form>
 
   </div>
   <div class="col-lg-3"></div>
 </div>
-<pre>
-  {{formData}}
-</pre>

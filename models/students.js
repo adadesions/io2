@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var _ = require('underscore');
 var Schema = mongoose.Schema;
 
 var studentsSchema = new Schema({
@@ -23,9 +24,8 @@ studentsSchema.methods.statusActive = function(){
 }
 
 studentsSchema.methods.redeemCheck = function(code) {
-  var redeem = "EOM@ADACODE.I/O";
-  if(redeem == code) return true;
-  else return false;
+  var redeem = ["EOM99@ADACODE.I/O", "JS2332.I/O", "BS3223.I/O", "EXP9999.I/O"];
+  return _.contains(redeem, code);
 }
 
 var Student = mongoose.model('students', studentsSchema);

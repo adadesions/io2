@@ -21,9 +21,14 @@ router.post('/register', function (req, res, next) {
     status: "active",
     datetime: new Date()
   });
-  newStudent.save();
-  var data = newStudent;
-  res.json({"status":"ok", "success": true, "data": data});
+
+  if(newStudent.redeemCheck(req.body.redeem)){
+    newStudent.save();
+    res.json({"status":"ok", "success": true});
+  }
+  else res.json({"status":"error", "success": false});
+
+
 });
 
 
