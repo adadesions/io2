@@ -13,13 +13,6 @@ var studentsSchema = new Schema({
   datetime: String,
 });
 
-studentsSchema.methods.courseCode = function(){
-  var course = this.course;
-  console.log(course);
-  if(course.indexOf('Experience of MEAN (EOM#1)') != -1)
-    this.course_code = "EOM001";
-  else this.course_code = "No Code";
-}
 
 studentsSchema.methods.statusActive = function(){
   var status = "active";

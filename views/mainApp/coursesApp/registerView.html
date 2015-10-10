@@ -10,48 +10,74 @@
     <br>
     <form>
       <div class="form-group">
-        <label for="courses">Choose your awesome course</label>
+        <label for="courses">
+          <i class="fa fa-hand-spock-o fa-lg"></i>
+          Choose your awesome course
+        </label>
         <select name="courses" id="courses" class="form-control" ng-model="formData.course">
-          <option  ng-repeat="course in courses" value="{{course.title}}">{{course.title}}</option>
+          <option  ng-repeat="course in courses" value="{{course.title}}">
+            <div ng-model="formData.course_code">{{course.code}}-</div>{{course.title}}
+          </option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="name">Fullname</label>
+        <label for="name">
+          <i class="fa fa-user fa-lg"></i>
+          Fullname
+        </label>
         <input type="text" class="form-control" id="name" name="name" ng-model="formData.name" placeholder="Steve Jobs">
       </div>
 
       <div class="form-group">
-        <label for="email">E-mail</label>
+        <label for="email">
+          <i class="fa fa-envelope-o fa-lg"></i>
+          E-mail
+        </label>
         <input type="email" class="form-control" id="email" name="email" ng-model="formData.email" placeholder="example@adacode.io">
       </div>
 
-      <label for="gender">Gender</label>
-      <div class="radio">
-        <label>
-          <input type="radio" name="gender" id="male" value="male" checked ng-model="formData.gender">
-          Male
+      <div class="form-group">
+        <label for="gender">
+          <i class="fa fa-mars fa-lg"></i>
+          Gender
+          <i class="fa fa-venus fa-lg"></i>
         </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="gender" id="female" value="female" ng-model="formData.gender">
-          Female
-        </label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="gender" id="male" value="male" checked ng-model="formData.gender">
+            <i class="fa fa-male fa-lg"></i> Male
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="gender" id="female" value="female" ng-model="formData.gender">
+            <i class="fa fa-female fa-lg"></i> Female
+          </label>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="age">Age</label>
+        <label for="age">
+          <i class="fa fa-hourglass-start fa-lg"></i>
+          Age
+        </label>
         <input type="number" class="form-control" id="age" name="age" min="1" max="108" ng-model="formData.age">
       </div>
 
       <div class="form-group">
-        <label for="mobile">Mobile Number</label>
+        <label for="mobile">
+          <i class="fa fa-mobile fa-lg"></i>
+          Mobile Number
+        </label>
         <input type="text" class="form-control" id="mobile" name="mobile" placeholder="0981010101" ng-model="formData.mobile">
       </div>
 
       <div class="form-group">
-        <label for="redeem">Redeem Code</label>
+        <label for="redeem">
+          <i class="fa fa-puzzle-piece fa-lg"></i>
+          Redeem Code
+        </label>
         <input type="text" class="form-control" id="redeem" name="redeem" placeholder="คุณจะได้รับหลังจากชำระเงินแล้ว" ng-model="formData.redeem">
       </div>
       <br>
@@ -63,6 +89,6 @@
   </div>
   <div class="col-lg-3"></div>
 </div>
-<!-- <pre>
+<pre>
   {{formData}}
-</pre> -->
+</pre>

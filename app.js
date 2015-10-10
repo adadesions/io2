@@ -4,12 +4,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var apis = require('./routes/api');
 
 var app = express();
+
+//DB Init
+mongoose.connect('mongodb://localhost/io');
+var db = mongoose.connection;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,6 +37,16 @@ app.use('/api', apis);
 app.all('/*', function(req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
     res.render('mainApp/main', { root: __dirname });
+});
+
+//MongoDB
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  console.log("Mongodb ststus: open connection");
+});
+
+db.on('disconnected', function() {
+  console.log("Mongodb status: disconnected")
 });
 
 

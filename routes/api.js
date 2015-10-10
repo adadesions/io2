@@ -10,8 +10,20 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/register', function (req, res, next) {
-    console.log("AADDAA-"+ req.body.name +" "+req.body.email);
-    res.json({"status":"ok", "success": true});
+  var newStudent = Student({
+    course_code: req.body.course_code,
+    course: req.body.course,
+    fullname: req.body.name,
+    email: req.body.email,
+    gender: req.body.gender,
+    age: req.body.age,
+    mobile: req.body.mobile,
+    status: "active",
+    datetime: new Date()
+  });
+  newStudent.save();
+  var data = newStudent;
+  res.json({"status":"ok", "success": true, "data": data});
 });
 
 
