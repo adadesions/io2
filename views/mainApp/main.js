@@ -39,4 +39,8 @@ ngApp.controller('mainCtrl', function($scope, $location){
     var active = (viewLocation === $location.path());
     return active;
   };
+
+  $(".navbar-nav li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
 });
