@@ -481,4 +481,17 @@ p{
     padding-bottom: 2em;
   }
 
+  /*Partnership*/
+  .partnership{
+    padding: 0.5em;
+  }
+    .partnership img{
+      height: 5em;
+      width: 5em;
+    }
+  .friend-item{
+    padding: 0.5em;
+    padding-top: 0;
+  }
+
 }
