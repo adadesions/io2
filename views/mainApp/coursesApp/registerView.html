@@ -15,7 +15,7 @@
           Choose your awesome course
         </label>
         <select name="courses" id="courses" class="form-control" ng-model="formData.course" required>
-          <option  ng-repeat="course in courses" value="{{course.title}}">
+          <option  ng-repeat="course in courses" value="{{course.code}}-{{course.title}}">
             <div ng-model="formData.course_code">{{course.code}}-</div>{{course.title}}
           </option>
         </select>
@@ -95,3 +95,6 @@
   </div>
   <div class="col-lg-3"></div>
 </div>
+<pre>
+  {{formData}}
+</pre>
