@@ -199,6 +199,9 @@ p{
 .my-font-green{
   color: #00C853;
 }
+.my-font-strong-green{
+  color: #43A047;
+}
 .my-blue{
   background-color: #0091EA;
 }
@@ -222,6 +225,9 @@ p{
 }
 .my-brown{
   background-color: #5D4037;
+}
+.my-font-pink{
+  color: #EC407A;
 }
 
 .cuz-modal{
@@ -253,6 +259,51 @@ p{
 .p-black{
   background-color: rgba(0,0,0,0.4);
 }
+
+/*PARTNERSHIP SECTION*/
+.row-black{
+  background-color: rgba(255,255,255,0.7);
+  padding: 0.5em;
+}
+.row-black:hover{
+  background-color: rgba(0,0,0,0.5);
+  color: #FFD600;
+}
+.partnership{
+  background: url('/images/forWelcome/friendship2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #FFF;
+  padding: 7em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+  .partnership small{
+    color: #AAA;
+  }
+  .partnership img{
+    height: 10em;
+    width: 13em;
+  }
+.friend-item{
+  padding: 2em;
+  padding-top: 1em;
+}
+  .friend-item h3{
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    padding: 0.3em;
+    color: #424242;
+  }
+  .friend-item h3:hover{
+    background-color: rgba(0,0,0,0.5);
+    color: #FFD600;
+  }
+  .friend-item a:hover{
+    text-decoration: none;
+  }
 
 /*COURSES SECTION*/
 .courses-header{

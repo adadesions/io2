@@ -268,6 +268,8 @@
         <h1 class="text-center">
             <span class="my-font-yellow">
               One man who stand for you!!
+              <br>
+              <small>Everything you would like to know about technology</small>
             </span>
           </h1>
         <br>
@@ -302,4 +304,26 @@
         <br>
     </div>
   </div>
+</div>
+
+<div class="row partnership">
+  <h1 class="text-center my-font-strong-green my-black">
+      <strong>
+        <i class="fa fa-users fa-lg"></i> My friends
+      </strong>
+    <br>
+    <small>
+      <span class="my-font-pink"><i>If you love me, you would <u>love all of them</u></i></span>
+    </small>
+  </h1>
+
+    <div class="col-lg-4 col-xs-3 friend-item text-center" ng-repeat="friend in friends">
+      <a href="{{friend.website}}">
+        <img class="img-rounded row-black" src="/images/forWelcome/myFriends/{{friend.img}}" alt="">
+        <h3 class="row-black">
+          <i>{{friend.name}}</i>
+        </h3>
+      </a>
+    </div>
+
 </div>

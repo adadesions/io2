@@ -1,9 +1,10 @@
 var ngCtrl = angular.module('coursesController', ["ngSanitize"]);
 
-ngCtrl.controller('coursesCtrl', function($scope, $http, $routeParams, $location){
+ngCtrl.controller('coursesCtrl', function($scope, $http, $routeParams, $location, $window){
   $scope.page = $routeParams.page;
   $scope.location = $location.url();
   $scope.formData = {};
+  $window.scrollTo(-100, -100);
 
   $scope.isAll = function(){
     return ($scope.page === 'all')
@@ -32,7 +33,7 @@ ngCtrl.controller('coursesCtrl', function($scope, $http, $routeParams, $location
       if(!data.success){
         console.log("ERROR");
       }
-      else{        
+      else{
         $location.url('/thankyou');
       }
     });

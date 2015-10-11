@@ -1,0 +1,38 @@
+{
+  "friends" : [
+    {
+      "id": 0,
+      "name": "Thai Programmar",
+      "img" : "thaiprogrammer.jpg",
+      "website" : "http://thaiprogrammer.org/"
+    },
+
+    {
+      "id": 1,
+      "name": "ComSci Cafe",
+      "img" : "comscicafe.png",
+      "website" : "http://www.comscicafe.com/home"
+    },
+
+    {
+      "id": 2,
+      "name": "Khadev",
+      "img" : "khadev.jpg",
+      "website" : "http://khadevmag.blogspot.com/"
+    },
+
+    {
+      "id": 3,
+      "name": "Cloud Course",
+      "img" : "cloudcourse.png",
+      "website" : "http://cloudcourse.io/"
+    },
+
+    {
+      "id": 4,
+      "name": "DriveSoft Center",
+      "img" : "drivesoft.png",
+      "website" : "http://cloudcourse.io/"
+    }
+  ]
+}
