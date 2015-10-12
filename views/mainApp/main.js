@@ -1,4 +1,4 @@
-var ngApp = angular.module('mainApp', ['ngRoute','welcomeController', 'coursesController']);
+var ngApp = angular.module('mainApp', ['ngRoute','welcomeController', 'coursesController', 'reportController']);
 ngApp.config(function($routeProvider, $locationProvider){
   $routeProvider
   .when('/', {
@@ -11,7 +11,7 @@ ngApp.config(function($routeProvider, $locationProvider){
     controller : 'coursesCtrl'
   })
   .when('/report', {
-    templateUrl : '/mainApp/comingsoon.html',
+    templateUrl : '/mainApp/reportApp/reportView.html',
     controller : 'reportCtrl'
   })
   .when('/about', {

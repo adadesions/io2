@@ -24,7 +24,7 @@ ngCtrl.controller('coursesCtrl', function($scope, $http, $routeParams, $location
     var undercut = $scope.formData.course.split("-");
     $scope.formData.course_code = undercut[0];
     $scope.formData.course = undercut[1];
-    
+
     $http({
         method : 'POST',
         url : '/api/register',
@@ -38,7 +38,7 @@ ngCtrl.controller('coursesCtrl', function($scope, $http, $routeParams, $location
         console.log("ERROR");
       }
       else{
-        // $location.url('/thankyou');
+        $location.url('/thankyou');
       }
     });
   };
