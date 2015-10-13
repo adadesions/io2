@@ -14,6 +14,10 @@ ngApp.config(function($routeProvider, $locationProvider){
     templateUrl : '/mainApp/reportApp/reportView.html',
     controller : 'reportCtrl'
   })
+  .when('/report/:title', {
+    templateUrl : '/mainApp/reportApp/reportView.html',
+    controller : 'reportCtrl'
+  })
   .when('/about', {
     templateUrl : '/mainApp/comingsoon.html',
     controller : 'aboutCtrl'

@@ -9,5 +9,44 @@
     </h1>
     <p class="my-font-green">Articles and News around Computer Science world by Ada</p>
   </div>
+</div>
+<div class="row">
+<div class="col-lg-3 wrap-report-menu">
+  <div class="report-menu">
+    <div class="overlay-report-menu"></div>
+    <h2>ADACODE.I/O
+      <span class="my-font-yellow">
+        <strong><i>REPORT</i></strong>
+    </h2>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+      <input type="text" class="form-control" placeholder="Search" ng-model="searchReport">
+    </div>
+    <br>
+    <div class="list-group" ng-repeat="report in reports | filter:searchReport | orderBy:'-date' ">
+        <a href="/report/{{report.title}}" class="list-group-item" ng-class="{'active': isActive('/report/{{report.title}}')}">
+          <h4 class="list-group-item-heading">
+            {{report.title}}
+            <span class="badge pull-right my-red" ng-show="isIndex0n1($index)">new</span>
+          </h4>
+          <small class="list-group-item-text">{{report.subtitle | limitTo: 32}}{{report.subtitle.length > 32 ? '...' : ''}}</small>
+        </a>
+    </div>
+  </div>
+</div>
 
+  <div class="col-lg-9 warp-report-body">
+    <div class="report-body">
+        <h1>
+          <strong>{{report.title}}</strong>
+          <small>{{report.subtitle}}</small>
+        </h1>
+        <p>
+          <i class="fa fa-star"></i> <strong>Writer</strong> : {{report.writer}} <br>
+          <i class="fa fa-map-signs"></i> <strong>Fields</strong> : {{report.fields}} <br>
+          <i class="fa fa-clock-o"></i> <strong>Date</strong>   : {{report.date}}   <br>
+        </p>
+        <p ng-bind-html="report.content"></p>
+    </div>
+  </div>
 </div>
