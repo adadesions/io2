@@ -12,16 +12,10 @@ var studentsSchema = new Schema({
   mobile: String,
   status: String,
   datetime: String,
+  survay: Schema.Types.Mixed,
 });
 
 
-studentsSchema.methods.statusActive = function(){
-  var status = "active";
-      course = this.course;
-  if(course.indexOf('Experience of MEAN (EOM#1)') != -1)
-    this.status = status;
-  else this.status = "reserved";
-}
 
 studentsSchema.methods.redeemCheck = function(code) {
   var redeem = ["EOM99@ADACODE.I/O", "JS2332.I/O", "BS3223.I/O", "EXP9999.I/O"];

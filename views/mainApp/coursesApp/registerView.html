@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-lg-3"></div>
-  <div class="form-register col-lg-6 col-xs-12">
-    <h1 class="text-center">
+  <div class="form-register col-lg-6 col-requireds-12">
+    <h1 class="terequiredt-center">
       <span class="my-font-yellow">Register</span>
       and
       <span class="my-font-green">Enjoy</span>
@@ -26,7 +26,7 @@
           <i class="fa fa-user fa-lg"></i>
           Fullname
         </label>
-        <input type="text" class="form-control" id="name" name="name" ng-model="formData.name" placeholder="Steve Jobs" required>
+        <input type="terequiredt" class="form-control" id="name" name="name" ng-model="formData.name" placeholder="Steve Jobs" required>
       </div>
 
       <div class="form-group">
@@ -68,7 +68,7 @@
           <i class="fa fa-hourglass-start fa-lg"></i>
           Age
         </label>
-        <input type="number" class="form-control" id="age" name="age" min="1" max="108" ng-model="formData.age" required>
+        <input type="number" class="form-control" id="age" name="age" min="1" marequired="108" ng-model="formData.age" required>
       </div>
 
       <div class="form-group">
@@ -76,7 +76,7 @@
           <i class="fa fa-mobile fa-lg"></i>
           Mobile Number
         </label>
-        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="0981010101" ng-model="formData.mobile" required>
+        <input type="terequiredt" class="form-control" id="mobile" name="mobile" placeholder="0981010101" ng-model="formData.mobile" required>
       </div>
 
       <div class="form-group">
@@ -84,14 +84,50 @@
           <i class="fa fa-puzzle-piece fa-lg"></i>
           Redeem Code
         </label>
-        <input type="text" class="form-control" id="redeem" name="redeem" placeholder="คุณจะได้รับหลังจากชำระเงินแล้ว" ng-model="formData.redeem" required>
+        <input type="terequiredt" class="form-control" id="redeem" name="redeem" placeholder="คุณจะได้รับหลังจากชำระเงินแล้ว" ng-model="formData.redeem" required>
+      </div>
+      <br>
+      <label for="">
+        Where did you hear about AdaCode.io?
+      </label>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="survay" value="fanpage" ng-model="formData.survay.fanpage">
+          Facebook fanpage
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="survay" value="comscicafe" ng-model="formData.survay.comscicafe">
+          ComSci Cafe poster
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="survay" value="website" ng-model="formData.survay.website">
+          AdaCode.io Website
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="group" ng-model="formData.survay.group.bool">
+          <input type="terequiredt" class="form-control" name="group" placeholder="FB group" ng-model="formData.survay.group.value">
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="other" ng-model="formData.survay.other.bool">
+          <input type="terequiredt" class="form-control" name="other" placeholder="Other" ng-model="formData.survay.other.value">
+        </label>
       </div>
       <br>
       <div class="col-lg-4"></div>
       <button type="submit" class="btn btn-success btn-lg col-lg-4" ng-disabled="registerForm.$invalid">Submit</button>
       <div class="col-lg-4"></div>
-    </form>
 
+    </form>
+  <br>
+  <br>  
   </div>
   <div class="col-lg-3"></div>
 </div>

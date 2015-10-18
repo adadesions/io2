@@ -25,6 +25,8 @@ ngCtrl.controller('coursesCtrl', function($scope, $http, $routeParams, $location
     $scope.formData.course_code = undercut[0];
     $scope.formData.course = undercut[1];
 
+    $scope.formData.survay = JSON.stringify($scope.formData.survay);
+
     $http({
         method : 'POST',
         url : '/api/register',
