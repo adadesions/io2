@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var mailer = require('express-mailer');
+var prerender = require('prerender-node');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -16,6 +17,19 @@ var app = express();
 //DB Init
 mongoose.connect('mongodb://localhost/io');
 var db = mongoose.connection;
+
+//Mailer Setup
+mailer.extend(app, {
+  from: 'robot@adacode.io',
+  host: 'smtp.zoho.com', // hostname
+  secureConnection: true, // use SSL
+  port: 465, // port for secure SMTP
+  transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts
+  auth: {
+    user: 'robot@adacode.io',
+    pass: 'adacode9898'
+  }
+});
 
 
 // view engine setup
@@ -32,6 +46,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'views')));
 
+
+//Prerender
+app.use(prerender);
 // app.use('/', routes);
 app.use('/users', users);
 app.use('/api', apis);
